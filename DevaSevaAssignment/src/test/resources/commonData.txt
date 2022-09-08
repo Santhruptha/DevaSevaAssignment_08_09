@@ -1,0 +1,10 @@
+platformVersion 10
+deviceId fd09ceee0407
+appPackage com.devaseva.app
+appActivity .MainActivity 
+urlAddress http://localhost:4723/wd/hub
+
+
+
+
+
