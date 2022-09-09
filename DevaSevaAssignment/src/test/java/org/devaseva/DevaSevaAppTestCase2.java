@@ -15,11 +15,12 @@ public class DevaSevaAppTestCase2 extends BaseClass {
 		public void TestCase1() throws InterruptedException
 		{
 			ThreadSafeClass.getMobileUtility().waittillElement(5000);
-			driver.swipe(515, 1567, 558, 480, 500);
+			driver.swipe(515, 1779, 558, 480, 500);
 			driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"View all Campaigns\"]")).click();
 			ThreadSafeClass.getMobileUtility().waittillElement(5000);
 			WebElement bookSeva = driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"Book A Seva\"]"));
 			boolean flag = bookSeva.isEnabled();
+			System.out.println("Image validated");
 			
 			//validation
 			Assert.assertTrue(flag);

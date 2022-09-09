@@ -1,5 +1,5 @@
-platformVersion 12
-deviceId emulator-5556
+platformVersion 11
+deviceId fd09ceee0407
 appPackage com.devaseva.app
 appActivity .MainActivity 
 urlAddress http://localhost:4723/wd/hub

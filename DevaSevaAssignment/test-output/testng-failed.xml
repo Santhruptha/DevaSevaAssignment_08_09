@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.Dream11.DevaSevaAppTestCase1">
+      <class name="org.devaseva.DevaSevaAppTestCase1">
         <methods>
           <include name="suiteSetUp"/>
-          <include name="TestCase1"/>
           <include name="suiteTearDown"/>
+          <include name="TestCase1"/>
           <include name="methodSetUp"/>
           <include name="methodTearDown"/>
         </methods>
-      </class> <!-- org.Dream11.DevaSevaAppTestCase1 -->
+      </class> <!-- org.devaseva.DevaSevaAppTestCase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

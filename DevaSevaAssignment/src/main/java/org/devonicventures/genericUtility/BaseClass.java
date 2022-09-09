@@ -3,9 +3,9 @@ package org.devonicventures.genericUtility;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.devonicventures.pomrepo.homePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -21,8 +21,10 @@ public class BaseClass {
 	public MobileUtility mobileUtility;
 	public FileUtility fileUtility;
 	JavaUtility javaUtility;
+	public homePage homepage;
 	
-	public ExcelUtility excelUtility;
+	
+	
 
 
 	@BeforeSuite
@@ -43,11 +45,9 @@ public class BaseClass {
 		mobileUtility=new MobileUtility();
 		fileUtility=new FileUtility();
 		javaUtility=new JavaUtility();
-		excelUtility=new ExcelUtility();
 
 		ThreadSafeClass.setFileUtility(fileUtility);
 		ThreadSafeClass.getFileUtility().initializePropertyFile(IConstants.PROPERTYFILEPATH);
-		excelUtility.initializeExcelFile(IConstants.EXCELFILEPATH);
 
 
 		//fetch the data from property file
@@ -69,14 +69,15 @@ public class BaseClass {
 
 		
 		ThreadSafeClass.getMobileUtility().initializeExplicitWait(10);
-
+		
+		
+//		 homepage=new homePage(driver);
 
 	
 	}
 
 	@AfterMethod
 	public void methodTearDown() {
-		excelUtility.closeWorkbook();
 		driver.closeApp();
 		ListenerImplimentationclass.testLog.info("Application closed");
 	}
